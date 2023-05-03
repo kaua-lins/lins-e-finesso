@@ -43,21 +43,7 @@ const mobileNavbar = new MobileNavBar (
 
 mobileNavbar.init();
 
-/* Botão para aparecer e desaparecer as informações dos prod */
-
-/* const produtoBtn = document.querySelector('.produto-button')
-const produtoInfo = document.querySelector('.produto-dropdown')
-
-produtoBtn.forEach(button => {
-    button.addEventListener('click', function(event) {
-
-        if (produtoInfo.style.display === 'none') {
-            produtoInfo.style.displat = 'block';
-        } else {
-            produtoInfo.style.display = 'none'
-        }
-    });
-}); */
+/* Botão para aparecer e desaparecer as informações dos produtos */
 
 function mostrarLista(id) {
   const lista = document.querySelector(`#${id}`);
