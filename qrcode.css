@@ -22,8 +22,7 @@ html {
     .container {
         border: 3px solid #2708A0;
         margin: 10px;
-        padding: 20px;
-        height: 90vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -57,7 +56,6 @@ html {
         text-align: center;
         font-size: 2rem;
         padding: 5px;
-        height: 10vh;
     }
 
     a {
