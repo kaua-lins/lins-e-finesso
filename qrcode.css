@@ -14,25 +14,32 @@ html {
 }
 
 @media (max-width: 999px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    }
+
     .container {
         border: 3px solid #2708A0;
         margin: 10px;
         padding: 20px;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         color: #2708A0;
         text-align: center;
         font-family: 'Montserrat Alternates', sans-serif;
-        padding: 20px;
     }
 
     .imagem {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 10px;
     }
 
     .informacoes {
@@ -40,14 +47,17 @@ html {
         font-size: 2rem;
         color: #2708A0;
         font-weight: bold;
-        text-align: left;
-        margin-bottom: 10px;
+        text-align: center;
     }
 
     .voltar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         font-size: 2rem;
         padding: 5px;
+        height: 10vh;
     }
 
     a {
