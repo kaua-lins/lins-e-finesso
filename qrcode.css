@@ -22,7 +22,7 @@ html {
     .container {
         border: 3px solid #2708A0;
         margin: 10px;
-        min-height: 100vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
