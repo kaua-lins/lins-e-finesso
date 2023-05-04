@@ -2,6 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat+Alternates:ital,wght@1,900&family=Source+Sans+Pro:wght@600&display=swap');
 
+/* Variáveis das cores */
+
+:root {
+    --cor-azul: #2708A0;
+    --cor-vermelho: #FF0000;
+    --cor-laranja: #FF8200;
+    --cor-marrom: #5f362b;
+    --cor-verde: #66c721;
+    --cor-roxo: #a82991;
+    --cor-cream: #F3FFB9;
+}
+
 /* Configurações gerais */
 
 * {
@@ -11,10 +23,6 @@
 
 html {
     font-size: 62.5%;
-}
-
-body {
-    color: #276FBF;
 }
 
 h1 {
@@ -58,7 +66,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #276FBF;
+    background-color: var(--cor-azul);
     height: 8vh;
 }
 
@@ -76,6 +84,14 @@ nav {
 
 .nav-list li {
     letter-spacing: 3px;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+.categoria-titulo {
+    color: var(--cor-azul);
 }
 
 /* Menu hamburguer */
@@ -114,11 +130,14 @@ nav {
 
 .produto-card {
     margin: 15px;
-    border: 3px solid #276FBF;
+    border: 3px solid #000;
+    padding: 10px;
 }
 
 .produto-titulo {
     padding: 30px;
+    color: #2708A0;
+
 }
 
 .produto-info p {
@@ -126,16 +145,12 @@ nav {
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     color: #fff;
-    background-color: #276FBF;
+    background-color: var(--cor-azul);
     cursor: pointer;
     
     padding: 15px;
     margin: 20px 15px;
     border-radius: 10px;
-
-}
-.produto-info p:hover {
-    opacity: 0.7;   
 }
 
 .produto-item {
@@ -149,39 +164,50 @@ nav {
     display: none;
 }
 
-.produto-informacoes h3{
+/* Informação dos cards */
+
+.produto-informacoes h3 {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
 .produto-informacoes {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
 }
 
 .produto-gramas,
-.produto-sabor {
-    border: 2px solid #276FBF;
+.produto-sabor,
+.produto-preco {
+    border: 2px solid #000;
+    border-radius: 15px;
     padding: 10px;
     margin: 5px;
     text-align: left;
 }
 
 .produto-gramas h3,
-.produto-sabor h3 {
-    border-bottom: 1px solid #276FBF;
-}
-
-.produto-preco {
-    display: flex;
-    justify-content: center;
-}
-
-.produto-preco ul {
-    width: 250px;
+.produto-sabor h3,
+.produto-preco h3 {
+    color: #2708A0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 2px solid #276FBF;
-    margin: 10px 60px 30px 10px;
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.produto-gramas li,
+.produto-sabor li,
+.produto-preco li {
+    margin-bottom: 7px;
+}
+
+.produto-gramas li,
+.produto-preco li {
+    color: var(--cor-azul);
 }
 
 /* Responsivo */
@@ -200,7 +226,7 @@ nav {
         right: 0;
         width: 50vw;
         height: 92vh;
-        background-color: #276FBF;
+        background-color: var(--cor-azul);
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -211,7 +237,6 @@ nav {
     .nav-list li {
         margin-left: 32px;
         opacity: 0;
-        font-weight: bold;
     }
 
     .mobile-menu {
@@ -222,12 +247,54 @@ nav {
 
     .aviso-container {
         padding: 10px;
+        color: var(--cor-vermelho);
     }
 
-}
+    .qr-code {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-.nav-list.active {
-    transform: translateX(0);
+    .qr-code a {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: var(--cor-vermelho);
+        font-size: 1.5rem;
+
+        padding: 10px;
+        text-decoration: underline;
+    }
+
+    /* .qr-code a {
+        text-align: right;
+        color: var(--cor-vermelho);
+    } */
+
+    /* Cor dos sabores */
+
+    .morango {
+        color: var(--cor-vermelho);
+    }
+
+    .laranja {
+        color: var(--cor-laranja);
+    }
+
+    .uva {
+        color: var(--cor-roxo);
+    }
+
+    .limao {
+        color: var(--cor-verde);
+    }
+
+    .chocolate {
+        color: var(--cor-marrom);
+    }
+
+    .baunilha {
+        color: var(--cor-cream);
+    }   
+    
 }
 
 /* Animação dos links */
